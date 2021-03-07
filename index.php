@@ -1,17 +1,14 @@
 <?php
 $body_id = "dictionary";
-include_once("./lib/php/config.php");
-include_once(HEADER);
+include_once("./lib/includes/header.php");
 #include_once("lib/php/search_engines.php");
-//$dict = new ItalyDAO();
+$dict = new ItalyDAO();
 ?>
 
   <div id="text">
     <form id="dictionaryForm" method="get" action="<?=$_SERVER['PHP_SELF']?>">
       <p>There are <b>
-      <?php
-//        htmlentities($dict->getCount("words"));
-      ?>
+      <?=htmlentities($dict->getCount("words"));?>
       </b> words and expressions in the database.</p>
       <h4>Enter a word to get its translation:</h4>
       <label><input type="text" name="phrase" id="phrase" class="text" /></label>
@@ -27,7 +24,7 @@ include_once(HEADER);
       <div id="displayWords">
         <?php
         if (isset($_GET['phrase']))
-         include_once("./lib/php/word_search.php");
+          include_once("./lib/php/word_search.php");
         ?>
       </div>
     </form>
@@ -35,5 +32,6 @@ include_once(HEADER);
 
 <p id="test"></p>
   <?php
-  include_once(FOOTER);
+  include_once("./lib/includes/footer.php");
   ?>
+

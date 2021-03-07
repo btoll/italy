@@ -2,11 +2,10 @@
 include_once("./db/italy.php");
 include_once("./db/adodb5/adodb.inc.php");
 include_once("./db/adodb5/adodb-errorpear.inc.php");
-//include_once("/usr/local/www/db/adodb5/adodb-pager.inc.php");
-//include_once("/usr/local/www/db/adodb5/adodb-exceptions.inc.php");
+//include_once("./db/adodb5/adodb-pager.inc.php");
+//include_once("./db/adodb5/adodb-exceptions.inc.php");
 
 class DB {
-
   protected $connection;
 
   public function __construct() {
@@ -16,7 +15,7 @@ class DB {
   protected function closeConnection() {
     $this->connection->Close();
   }
-
 }
 
 ?>
+
