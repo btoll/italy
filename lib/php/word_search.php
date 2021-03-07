@@ -1,8 +1,8 @@
 <?php
-include_once("/home/benjamin/public_html/italy/lib/php/config.php");
-include_once("/home/benjamin/db/db.php");
+include_once("./lib/php/config.php");
+include_once("./db/db.php");
 function __autoload($class) {
-  require_once("/home/benjamin/public_html/italy/lib/php/classes/$class.php");
+  require_once("./lib/php/classes/$class.php");
 }
 
 #########################################
@@ -42,12 +42,12 @@ if ($display2[0] == 0) {
     while ($display = mysql_fetch_assoc($result)) {
       $all_words[] = "\nword: " . $display['word'] . "\nlanguage: " . $display['language'] . "\nip: " . $display['ip'] . "\ntimestamp: " . $display['timestamp'];
     }
-    $cfg->sendEmail((object) array(
-      "message" => "Here are the latest searched words:\n\n" . join("\n", $all_words),
-      "subject" => "italy.benjamintoll.com searched words list",
-      "mail_to" => "benjam72@yahoo.com",
-      "mail_from" => "wotd@benjamintoll.com"
-    ));
+//    $cfg->sendEmail((object) array(
+//      "message" => "Here are the latest searched words:\n\n" . join("\n", $all_words),
+//      "subject" => "italy.benjamintoll.com searched words list",
+//      "mail_to" => "benjam72@yahoo.com",
+//      "mail_from" => "wotd@benjamintoll.com"
+//    ));
   }
 
 } else {

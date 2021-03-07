@@ -1,9 +1,8 @@
 <?php
 $body_id = "wotd";
-include_once("../lib/php/config.php");
-include_once(HEADER);
+include_once("../lib/includes/header.php");
 #include_once("../lib/php/search_engines.php");
-$cfg = new ItalyDAO();
+//$cfg = new ItalyDAO();
 ?>
 
   <div id="text">
@@ -15,14 +14,16 @@ $cfg = new ItalyDAO();
 
     <div id="response">
       <?php
-        if (isset($_POST['email'])) {
-          $cfg->checkEmail($_POST['email']);
-        }
+//        if (isset($_POST['email'])) {
+//          $cfg->checkEmail($_POST['email']);
+//        }
       ?>
     </div>
 
     <div id="random">
-      <?=$cfg->getRandomWord();?>
+      <?php
+//        $cfg->getRandomWord();
+      ?>
     </div>
 
     <form id="refreshForm" method="post" action="<?=$_SERVER['PHP_SELF']?>">
@@ -31,5 +32,5 @@ $cfg = new ItalyDAO();
   </div>
 
   <?php
-  include_once(FOOTER);
+  include_once("../lib/includes/footer.php");
   ?>

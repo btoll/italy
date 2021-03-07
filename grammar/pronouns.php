@@ -1,7 +1,6 @@
 <?php
 $body_id = "grammar";
-include_once("../lib/php/config.php");
-include_once(HEADER);
+include_once("../lib/includes/header.php");
 #include_once("../lib/php/search_engines.php");
 ?>
 
@@ -95,5 +94,5 @@ include_once(HEADER);
 </div>
 
 <?php
-include_once(FOOTER);
+include_once("../lib/includes/footer.php");
 ?>

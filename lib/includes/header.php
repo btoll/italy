@@ -1,9 +1,9 @@
 <?php
-include_once("/home/benjamin/lib/php/italy/italy.php");
+include_once("./db/italy.php");
 #the autoloader function is here instead of putting it on every php script that needs it;
-include_once("/home/benjamin/public_html/italy/lib/php/config.php");
+include_once("./lib/php/config.php");
 function __autoload($class) {
-  require_once("/home/benjamin/public_html/italy/lib/php/classes/$class.php");
+  require_once("./lib/php/classes/$class.php");
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

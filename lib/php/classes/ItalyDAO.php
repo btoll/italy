@@ -1,7 +1,8 @@
 <?php
-include_once("/home/benjamin/public_html/lib/php/interfaces/Email.php");
+//include_once("./lib/php/interfaces/Email.php");
 
-class ItalyDAO extends DB implements Email {
+//class ItalyDAO extends DB implements Email {
+class ItalyDAO extends DB {
 
   protected $scrubber;
   protected $template;
@@ -93,7 +94,7 @@ class ItalyDAO extends DB implements Email {
 
   public function getLinks($id) {
     $query = $this->connection->Prepare("SELECT link, name FROM links WHERE type = ? ORDER BY name");
-    $rs = $this->connection->GetAssoc($query, array($this->scrubber->toHtml($id))); 
+    $rs = $this->connection->GetAssoc($query, array($this->scrubber->toHtml($id)));
     if ($this->connection->ErrorNo() == 0) {
       return $this->template->getLinks($rs);
     }
@@ -124,7 +125,7 @@ class ItalyDAO extends DB implements Email {
 
   public function getWords() {
     $language = $this->cleaned['language'] === "italian" ? "italian" : "translation"; //"translation" == search for the English words;
-    
+
     switch ($this->cleaned['match']) {
       case "like":
         $phrase = $this->cleaned['phrase'];

@@ -1,8 +1,7 @@
 <?php
 $body_id = "verbs";
-include_once("../lib/php/config.php");
 //include_once("../lib/php/verbs.php");
-include_once(HEADER);
+include_once("../lib/includes/header.php");
 #include_once("../lib/php/search_engines.php");
 $cfg = new ItalyDAO($_REQUEST);
 $regular = "";
@@ -72,5 +71,5 @@ if (isset($_POST['name'])) {
   </div>
 
   <?php
-  include_once(FOOTER);
+  include_once("../lib/includes/footer.php");
   ?>
