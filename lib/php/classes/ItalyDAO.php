@@ -2,6 +2,12 @@
 //include_once("./lib/php/interfaces/Email.php");
 
 //class ItalyDAO extends DB implements Email {
+//include("./lib/php/classes/DB.php");
+//include("./lib/php/classes/Scrubber.php");
+//include("./lib/php/classes/Template.php");
+include(dirname(__FILE__)."/DB.php");
+include(dirname(__FILE__)."/Scrubber.php");
+include(dirname(__FILE__)."/Template.php");
 class ItalyDAO extends DB {
 
   protected $scrubber;
@@ -153,5 +159,5 @@ class ItalyDAO extends DB {
   }
 
 }
-
 ?>
+

@@ -1,6 +1,6 @@
 <?php
 //include_once("./lib/php/config.php");
-//include_once("./db/db.php");
+include_once("../../db/italy.php");
 //function __autoload($class) {
 //  require_once("./lib/php/classes/$class.php");
 //}
@@ -26,8 +26,8 @@ if ($match == "like") {
   $sql2 = sprintf("SELECT COUNT(*) FROM words WHERE $language = '%s' ORDER BY italian, grammar", addslashes($phrase));
 }
 
-$db = mysqli_connect("localhost", "btoll", "aa892sbr");
-mysqli_select_db($db, "italy");
+$db = mysqli_connect(DB_Config::DBHOST, DB_Config::DBUSER, DB_Config::DBPASS);
+mysqli_select_db($db, DB_Config::DBNAME);
 
 //if there is nothing returned then let the user know and the script will end;
 $result2 = mysqli_query($db, $sql2) or die("The server cannot be reached at this time.");
@@ -42,7 +42,7 @@ if ($display2[0] == 0) {
   if ($cfg->getCount("word_search") > 9) {
     $result = mysql_query("SELECT * FROM word_search");
     $all_words = array();
-    while ($display = mysql_fetch_assoc($result)) {
+    while ($display = mysqli_fetch_assoc($result)) {
       $all_words[] = "\nword: " . $display['word'] . "\nlanguage: " . $display['language'] . "\nip: " . $display['ip'] . "\ntimestamp: " . $display['timestamp'];
     }
 //    $cfg->sendEmail((object) array(
@@ -141,7 +141,9 @@ if ($display2[0] == 0) {
       echo $href_first_part = "<p>$n. <a href=\"index.php?phrase=$temp&language=italian&match=like\" class=\"italianWord\" onclick=\"ITALIA.getWords('lib/php/word_search.php', '$temp', 'italian', 'like'); return false;\"><strong>$iword</strong></a> [<a href=\"/pronunciation/\" class=\"pronunciation\"><strong>{$display['pronunciation']}</strong></a>], <span style=\"color: #000;\">{$display['grammar']}:</span> ";
 
       //remember all links are set to be white in the stylesheet; override, or links will be white against a white background;
-      echo preg_replace("([^,;]+)", "<a href='index.php?phrase=\\1&language=english&match=like' onclick=\"ITALIA.getWords('lib/php/word_search.php', '\\1', 'english', 'like'); return false;\"><strong>\\1</strong></a>", $display['translation']);
+      $pattern = "/([^,;]+)/";
+      $replace = "<a href='index.php?phrase=$1&language=english&match=like' onclick=\"ITALIA.getWords('lib/php/word_search.php', '$1', 'english', 'like'); return false;\"><strong>$1</strong></a>";
+      echo preg_replace($pattern, $replace, $display['translation']);
       echo "</p>";
 
     }

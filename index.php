@@ -2,6 +2,7 @@
 $body_id = "dictionary";
 include_once("./lib/includes/header.php");
 #include_once("lib/php/search_engines.php");
+require_once("./lib/php/classes/ItalyDAO.php");
 $dict = new ItalyDAO();
 ?>
 

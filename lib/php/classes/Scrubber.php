@@ -1,9 +1,8 @@
 <?php
 
 class Scrubber {
-
   private $cleaned;
-  private $reEmail = "^([0-9a-z]+)([0-9a-z\.-_]+)@([0-9a-z\.-_]+)\.([0-9a-z]+)";
+  private $reEmail = "/^([0-9a-z]+)([0-9a-z\.-_]+)@([0-9a-z\.-_]+)\.([0-9a-z]+)/";
 
   private function in($value) {
     return strip_tags(trim($value));
@@ -27,7 +26,7 @@ class Scrubber {
 
   public function scrubEmail($email) {
     $email = $this->out($email);
-    return !eregi($this->reEmail, $email) ? FALSE : $email;
+    return !preg_match($this->reEmail, $email) ? FALSE : $email;
   }
 
   public function toHtml($vars) {
@@ -41,7 +40,6 @@ class Scrubber {
       return $this->out($vars);
     }
   }
-
 }
-
 ?>
+

@@ -1,10 +1,10 @@
 <?php
-include_once("./db/italy.php");
+//include_once("./db/italy.php");
 #the autoloader function is here instead of putting it on every php script that needs it;
-include_once("./lib/php/config.php");
-function __autoload($class) {
-  require_once("./lib/php/classes/$class.php");
-}
+//include_once("./lib/php/config.php");
+//function __autoload($class) {
+//  require_once("lib/php/classes/$class.php");
+//}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,7 +29,7 @@ function __autoload($class) {
         <ul class="level2">
           <li><a href="/grammar/numbers.php" title="Numbers">Numbers</a></li>
           <li><a href="/grammar/pronouns.php" title="Pronouns">Pronouns</a></li>
-          <li><a href="/grammar/verbs.php" title="Verbs">Verbs</a></li>
+          <!--<li><a href="/grammar/verbs.php" title="Verbs">Verbs</a></li>-->
         </ul>
       </li>
       <li><a id="linksHref" href="/links/" title="Links">Links</a></li>

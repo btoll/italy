@@ -2,7 +2,8 @@
 $body_id = "wotd";
 include_once("../lib/includes/header.php");
 #include_once("../lib/php/search_engines.php");
-//$cfg = new ItalyDAO();
+include("../lib/php/classes/ItalyDAO.php");
+$cfg = new ItalyDAO();
 ?>
 
   <div id="text">
@@ -14,15 +15,15 @@ include_once("../lib/includes/header.php");
 
     <div id="response">
       <?php
-//        if (isset($_POST['email'])) {
-//          $cfg->checkEmail($_POST['email']);
-//        }
+        if (isset($_POST['email'])) {
+          $cfg->checkEmail($_POST['email']);
+        }
       ?>
     </div>
 
     <div id="random">
       <?php
-//        $cfg->getRandomWord();
+        $cfg->getRandomWord();
       ?>
     </div>
 
@@ -34,3 +35,4 @@ include_once("../lib/includes/header.php");
   <?php
   include_once("../lib/includes/footer.php");
   ?>
+

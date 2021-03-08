@@ -1,7 +1,7 @@
 <?php
-include_once("./db/italy.php");
-include_once("./db/adodb5/adodb.inc.php");
-include_once("./db/adodb5/adodb-errorpear.inc.php");
+include(dirname(__FILE__)."/../../../db/italy.php");
+include(dirname(__FILE__)."/../../../db/adodb5/adodb.inc.php");
+include(dirname(__FILE__)."/../../../db/adodb5/adodb-errorpear.inc.php");
 //include_once("./db/adodb5/adodb-pager.inc.php");
 //include_once("./db/adodb5/adodb-exceptions.inc.php");
 
@@ -16,6 +16,5 @@ class DB {
     $this->connection->Close();
   }
 }
-
 ?>
 

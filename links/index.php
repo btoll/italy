@@ -2,6 +2,7 @@
 $body_id = "links";
 include_once("../lib/includes/header.php");
 #include_once("../lib/php/search_engines.php");
+include("../lib/php/classes/ItalyDAO.php");
 $links = new ItalyDAO();
 ?>
 
@@ -21,3 +22,4 @@ $links = new ItalyDAO();
   <?php
   include_once("../lib/includes/footer.php");
   ?>
+

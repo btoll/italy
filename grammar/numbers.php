@@ -179,10 +179,14 @@ include_once("../lib/includes/header.php");
 </div>
 
 <script type="type/javascript">
-  var h = document.getElementsByTagName("h4");
-  for (var i = 0, len = h.length; i < len; i++) {
-    h[i].style.display = "none";
-  }
+//  var h = document.getElementsByTagName("h4");
+//  for (var i = 0, len = h.length; i < len; i++) {
+//    h[i].style.display = "none";
+//  }
+
+  document.getElementsByTagName("h4").forEach(item =>
+    item.style.display = "none"
+  );
 </script>
 
 <?php
