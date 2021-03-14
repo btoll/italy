@@ -1,9 +1,6 @@
 <?php
 //include_once("./lib/php/config.php");
-include_once("../../db/italy.php");
-//function __autoload($class) {
-//  require_once("./lib/php/classes/$class.php");
-//}
+include(dirname(__FILE__)."/../../../italy.php");
 
 #########################################
 
