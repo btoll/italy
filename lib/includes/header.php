@@ -24,7 +24,7 @@
     <ul class="level1">
       <li><a id="dictionaryHref" href="/" title="Dictionary">Dictionary</a></li>
       <li><a id="pronunciationHref" href="/pronunciation/" title="Pronunciation">Pronunciation</a></li>
-      <li><a id="wotdHref" href="/wotd/" title="Word Of The Day">Word Of The Day</a></li>
+      <!--<li><a id="wotdHref" href="/wotd/" title="Word Of The Day">Word Of The Day</a></li>-->
       <li class="submenu"><a id="grammarHref" class="crossHair" href="/grammar/numbers.php" title="Grammar">Grammar</a>
         <ul class="level2">
           <li><a href="/grammar/numbers.php" title="Numbers">Numbers</a></li>
