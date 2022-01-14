@@ -1,9 +1,9 @@
 <?php
 include(dirname(__FILE__)."/../../../../italy.php");
-include(dirname(__FILE__)."/../../../db/adodb5/adodb.inc.php");
-include(dirname(__FILE__)."/../../../db/adodb5/adodb-errorpear.inc.php");
-//include_once("./db/adodb5/adodb-pager.inc.php");
-//include_once("./db/adodb5/adodb-exceptions.inc.php");
+include(dirname(__FILE__)."/../../../../ADOdb-5.21.3/adodb.inc.php");
+include(dirname(__FILE__)."/../../../../ADOdb-5.21.3/adodb-errorpear.inc.php");
+//include_once("./db/ADOdb-5.21.3/adodb-pager.inc.php");
+//include_once("./db/ADOdb-5.21.3/adodb-exceptions.inc.php");
 
 class DB {
   protected $connection;
