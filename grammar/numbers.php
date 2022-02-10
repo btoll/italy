@@ -1,11 +1,9 @@
 <?php
-$body_id = "grammar";
+$body_id = "numbers";
 include_once("../lib/includes/header.php");
-#include_once("../lib/php/search_engines.php");
 ?>
-
-<div id="text">
-
+<main>
+<article id="text">
 <h3>I Numeri</h3>
 
 <h4>0 to 20</h4>
@@ -175,8 +173,8 @@ include_once("../lib/includes/header.php");
   <tr><td>14&#176; quattordicesimo</td><td>1.000.000.000&#176; miliardesimo</td></tr>
   </table>
 </div>
-
-</div>
+</article>
+</main>
 
 <script type="type/javascript">
 //  var h = document.getElementsByTagName("h4");
@@ -192,3 +190,4 @@ include_once("../lib/includes/header.php");
 <?php
 include_once("../lib/includes/footer.php");
 ?>
+

@@ -1,0 +1,234 @@
+@media (max-width: 768px) {
+    .nav-container {
+        margin: 0 !important;
+    }
+    nav li a {
+        padding: 20px 7px !important;
+    }
+    aside {
+	display: none;
+	width: 0 !important;
+    }
+    article {
+        margin: 20px !important;
+    }
+}
+
+html, body, main {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 80px 0 0 50px;
+}
+
+aside {
+    float: left;
+    margin-left: 20px;
+    padding: 0;
+    width: 250px;
+}
+
+article {
+    margin: 0 25px 0 270px;
+}
+
+/* Account for different markup. */
+article h3 + p::first-letter,
+article p:nth-child(1)::first-letter {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#contact article h3 + p::first-letter {
+    font-weight: normal;
+    font-size: inherit;
+}
+
+article .note {
+    background-color: #eee;
+    border: 1px solid #000;
+    color: #000;
+    margin: 10px;
+    padding: 10px;
+}
+
+aside figure {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+nav {
+    background: #996;
+    border: 1px solid #eee;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-container {
+    margin: 0 0 0 15%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    background: #996;
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    padding: 20px 10px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background: #c1c178;
+}
+
+/* Highlight the link of the current page. */
+#dictionary nav li a[href="/"],
+#pronunciation nav li a[href*="pronunciation"],
+#grammar nav li a[href*="grammar"],
+#numbers nav li a[href*="numbers"],
+#pronouns nav li a[href*="pronouns"],
+#links nav li a[href*="links"],
+#contact nav li a[href*="contact"] {
+    background: #c1c178;
+}
+
+/* Hover menu */
+li.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+li.dropdown ul {
+    background: #996;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    z-index: 1;
+}
+
+li.dropdown:hover ul {
+    display: block;
+}
+
+/****************************/
+
+body#dictionary #text a:hover {
+  background: #FFF;
+  color: #FFA500;
+  text-decoration: overline underline;
+}
+body#dictionary p a strong {
+  color: navy;
+}
+
+body#dictionary p a.italianWord {
+  color: #FFA500;
+  text-decoration: underline;
+}
+
+body#dictionary p a.italianWord strong {
+  color: brown;
+  font-weight: normal;
+}
+
+body#dictionary p a.pronunciation strong {
+  color: olive;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+form#dictionaryForm h4 {
+  margin: 0
+}
+
+form#dictionaryForm p b {
+  color: blue;
+}
+
+form#dictionaryForm label {
+  display: block;
+}
+
+form#dictionaryForm p label { /*the Search and Clear buttons should be on the same line*/
+  display: inline;
+}
+
+div#displayWords p { /*displayWords is the container for the ajax response*/
+  border-top: none;
+  color: navy;
+  font-size: 14px;
+  margin: 2px 0;
+  padding: 3px;
+  text-align: left;
+}
+
+body#pronunciation div#text p {
+  font-weight: bold;
+  margin-top: 0;
+}
+body#pronunciation h4 {
+  text-decoration: underline;
+}
+
+body#pronunciation ul {
+  list-style: none;
+  margin: 0;
+  margin-left: 22px;
+  padding: 0;
+}
+
+body#pronunciation ol {
+  margin: 0;
+}
+
+body#grammar h3 {
+  margin-top: 0;
+}
+
+#verbTypesForm p strong {
+  display: block;
+}
+
+.conjVerb,
+body#grammar h4,
+body#links h4 {
+  background: #afb7a3;
+  padding: 10px;
+}
+
+body#links #text a {
+  color: #C1A571;
+  display: block;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+body#links #text a:hover {
+  text-decoration: underline;
+}
+

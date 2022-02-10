@@ -1,11 +1,9 @@
 <?php
-$body_id = "grammar";
+$body_id = "pronouns";
 include_once("../lib/includes/header.php");
-#include_once("../lib/php/search_engines.php");
 ?>
-
-<div id="text">
-
+<main>
+<article id="text">
 <h3>I Pronomi</h3>
 
 <h4>Direct Object</h4>
@@ -91,8 +89,9 @@ include_once("../lib/includes/header.php");
   </table>
 </div>
 
-</div>
-
+</article>
+</main>
 <?php
 include_once("../lib/includes/footer.php");
 ?>
+
