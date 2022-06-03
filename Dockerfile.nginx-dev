@@ -1,0 +1,6 @@
+FROM nginx:alpine
+COPY proxy-config/dev/nginx.conf /etc/nginx/
+COPY proxy-config/dev/conf.d/ /etc/nginx/conf.d/
+COPY . /var/www/html
+EXPOSE 80
+

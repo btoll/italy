@@ -1,0 +1,6 @@
+FROM nginx:alpine
+COPY proxy-config/prod/nginx.conf /etc/nginx/
+COPY proxy-config/prod/conf.d/ /etc/nginx/conf.d/
+COPY . /var/www/html
+EXPOSE 80 443
+
