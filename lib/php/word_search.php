@@ -1,6 +1,5 @@
 <?php
-//include_once("./lib/php/config.php");
-include(dirname(__FILE__)."/../../../italy.php");
+include("../../lib/php/classes/ItalyDAO.php");
 
 #########################################
 
@@ -37,7 +36,7 @@ if ($display2[0] == 0) {
   $cfg = new ItalyDAO($arr);
   $cfg->addWordSearch();
   if ($cfg->getCount("word_search") > 9) {
-    $result = mysql_query("SELECT * FROM word_search");
+    $result = mysqli_query($db, "SELECT * FROM word_search") or die(mysql_error());
     $all_words = array();
     while ($display = mysqli_fetch_assoc($result)) {
       $all_words[] = "\nword: " . $display['word'] . "\nlanguage: " . $display['language'] . "\nip: " . $display['ip'] . "\ntimestamp: " . $display['timestamp'];
